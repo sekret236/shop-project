@@ -175,5 +175,6 @@ input:focus {
     margin: 0 auto;
     position: absolute;
     top: 15px;
+    font-size: 12px;
     
 }
