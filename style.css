@@ -318,7 +318,8 @@ form .search, .background{
     
     .menu2 li:hover .submenu2{
         display: block;
-        
+        position: absolute;
+        z-index: 1;
         }
         
     .menu-margin{
@@ -471,3 +472,7 @@ form .search, .background{
           
      }
 
+.footer{
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
