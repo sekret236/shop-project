@@ -337,46 +337,17 @@ form .search, .background{
         
     }
 
-    .img-1 {
         
-        background-image: url(images/computer.png);
-                         
-    }
-    .img-2{
-        background-image: url(images/smartTV.png);
-    }
-    
-    .img-3{
-        background-image: url(images/smartwatsh.png);
-    }
-    
-    .img-4 {
-        background-image: url(images/laptop.png);
-    }
-    .img-5 {
-        background-image: url(images/ipod.png); 
-    }
-    .img-6 {
-        background-image: url(images/smartphone.png); 
-    }
-    .img-7 {
-        background-image: url(images/tablet.png); 
-    }
-    .img-8 {
-        background-image: url(images/androidTV.png); 
-    }
-    .img-9 {
-        background-image: url(images/watch.png); 
-    }
-
-    [class*="img-"]{
+    .img{
         background-color: rgba(255, 255, 255, 0.75);
-        background-repeat: no-repeat;
-        background-position: center;
         width: 100%;
-        height: 180px;
-        position: relative;
-        
+        height: 180px;  
+        position: relative;      
+    }
+    .img img{
+        display: block;
+        margin: 0 auto;
+       
     }
     .like, .square, .dislike, .unsquare{
         width: 30px;
