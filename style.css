@@ -224,16 +224,69 @@ form .search, .background{
     background-color: rgba(0, 0, 0, 0.2);
     }
 
-/*Main section*/
-.aside{
+
+/*Main section - filter*/
+.filter{
     height: 845px;
     background-color: rgba(255, 255, 255, 0.2);
+    padding-left: 30px;
 }
+div.filter-options{
+    padding-top: 60px;
+    line-height: 35px;
+}
+div.filter-options:first-child{
+    padding-top: 30px;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+label{
+    align-items: center;
+}
+label::before{
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+input[type="checkbox"]:checked+ label::before{
+    background-color: white;  
+}
+.list-options{
+    font-size: 21px;
+    color: white;
+}
+.show-more{
+    display: block;
+    padding-left: 5px;
+    font-size: 21px;
+    color: white;
+    text-decoration: none;
+    
+}
+div.filter-btn{
+    width: 100%;
+    margin-top: 20px;
+    }  
+h3 {
+    font-size: 21px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+/*Style breadcrumbs*/
 h1{
     font-size: 48px;
     color: white;
     font-weight: bold;
 }
+
 .breadcrumbs{
     margin-top: 30px;
     margin-bottom: 10px;
@@ -428,9 +481,53 @@ cursor: pointer;
     background-repeat: no-repeat;
     background-position: 94%
 }
+.filter-submit{
+    margin-left: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0;
+}
 
-
-.footer{
-    height: 100px;
+.load-more{
+    height: 150px;
+    margin-top: 45px;
+    text-align: center;
+}
+.load-more a{
+    display: block;
+    text-decoration: none;
+    font-size: 36px;
+    color: #ffffff;
+    
+}
+footer{
     background-color: rgba(255, 255, 255, 0.75);
+}
+.footer a{
+    text-decoration: none;
+    font-size: 21px;
+    color: #2c71b8;
+
+}
+.label{
+    display: inline;
+    margin-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #2c71b8;
+    border-radius: 50%;
+    font-size: 15px;
+    color: #2c71b8;
+}
+.footer {
+    position: relative;
+    height: 100px;
+}
+.footer>div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
