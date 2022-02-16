@@ -260,6 +260,7 @@ input[type="checkbox"]:checked+ label::before{
 .list-options{
     font-size: 21px;
     color: white;
+    cursor: pointer;
 }
 .show-more{
     display: block;
