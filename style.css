@@ -409,14 +409,11 @@ ul.breadcrumbs li{
     background: url(images/square.png) no-repeat center;
 }
 
-/*.like:hover, .like-chosen {
-    background: url(images/dislike.png) no-repeat center;
-    background-color: #2c71b8;
-}*/
-.likeChosen {
+.like:hover, .likeChosen {
     background: url(images/dislike.png) no-repeat center;
     background-color: #2c71b8;
 }
+
 .zoom:hover{
     background: url(images/ring.png) no-repeat center;
     background-color: #2c71b8;
