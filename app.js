@@ -23,8 +23,15 @@ moreDetailsBtns.forEach((btn) => {
 const btnClose = document.querySelector(".btn-close");
 
 btnClose.addEventListener("click", function(){
-    modal.classList.add("hide");
+   
+       if  (modal.classList.contains("show")) {
+           (modal.classList.remove("show"))
+       }
+       else {
+        modal.classList.add("show")
+    }
 });
+
 
 // like
 const likes = document.querySelectorAll(".like");
