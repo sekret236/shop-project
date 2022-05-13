@@ -13,24 +13,38 @@ for (let i = 0; i < addToCartBtns.length; i++) {
 // modal
 const modal = document.querySelector(".modal");
 const moreDetailsBtns = document.querySelectorAll(".btn-more-details");
+const closeBtn = document.querySelector(".btn-close")
+
+function openModal() {
+    modal.classList.add("show");
+    modal.classList.remove("hide");
+  }
+  
+  function closeModal() {
+    modal.classList.add("hide");
+    modal.classList.remove("show");
+  }
 
 moreDetailsBtns.forEach((btn) => {
-    btn.addEventListener("click", function () {
-        modal.classList.add("show");
-    });
+    btn.addEventListener("click", openModal);
 });
 
-const btnClose = document.querySelector(".btn-close");
+closeBtn.addEventListener("click", closeModal);
 
-btnClose.addEventListener("click", function(){
-   
-       if  (modal.classList.contains("show")) {
-           (modal.classList.remove("show"))
-       }
-       else {
-        modal.classList.add("show")
+modal.addEventListener("click", function(e){
+    if (e.target === modal) {
+        closeModal();
     }
 });
+
+function showModalByScroll() {
+
+    if (window.pageYOffset > document.body.scrollHeight / 2) {
+        openModal() ;
+        window.removeEventListener("scroll", showModalByScroll);
+    } 
+}
+window.addEventListener("scroll", showModalByScroll);
 
 
 // like
@@ -43,5 +57,11 @@ for (let like of likes) {
  
  };
 
+ //slick
 
+ $(".slider").slick({
+     /*autoplay: true,*/
+     dots: true
+ });
+ 
 

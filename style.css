@@ -213,14 +213,14 @@ form .search, .background{
 
 /*Slider*/
 .slider{
-    height: 400px;
     color: white;
     font-size: 50px;
     text-align: center;
    }
+   .slider > div {
+       padding: 175px 0;
+   }
 .blackslider{
-    width: 100%;
-    height: 400px;
     background-color: rgba(0, 0, 0, 0.2);
     }
 
@@ -591,4 +591,36 @@ footer{
 }
 .hide {
     display: none;
+}
+
+.slick-dots li.slick-active button:before {
+    width: 12px;
+    height: 11px;
+    color: #ffffff;
+    background-color: #ffffff;
+     
+}
+.slick-dots li button:before {
+color: transparent;
+}
+
+.slick-dots li button {
+    width: 11px;
+    height: 11px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.slick-prev:before {
+    content: "<";
+    font-family: monospace;
+    font-size: 60px; 
+}
+.slick-next:before {
+    content: ">";
+    font-family: monospace;
+    font-size: 60px; 
+    }
+.slick-next {
+    right: -5px;
 }
