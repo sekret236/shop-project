@@ -97,6 +97,7 @@ body{
     position: absolute;
     text-align: left;
     left: -1px;
+    z-index: 1;
   }
 
 /*делаем меню выпадающим*/
