@@ -625,3 +625,10 @@ color: transparent;
 .slick-next {
     right: -5px;
 }
+
+/* counter*/
+
+.product-quantity {
+    text-align: center;
+    margin-bottom: 5px;
+}

@@ -64,4 +64,56 @@ for (let like of likes) {
      dots: true
  });
  
+ 
+  
+const decrementBtns = document.querySelectorAll(".decrement-button");
+const incrementBtns = document.querySelectorAll(".increment-button");
+const quantityInputs = document.querySelectorAll(".product-quantity input");
 
+
+
+   class Counter {
+        constructor(incrementBtn, decrementBtn, quantityInput, minCount = 1, maxCount = 5) {
+            this.domRefs = {
+                incrementBtn,
+                decrementBtn,
+                quantityInput,
+            };
+
+               
+            //Дизейблим increment-button и decrement-button
+            this.toggleButtonState = function () {
+                const count = this.domRefs.quantityInput.value;
+                this.domRefs.decrementBtn.disabled = count <= minCount;
+                this.domRefs.incrementBtn.disabled = count >= maxCount;
+            };
+
+            this.toggleButtonState();
+
+
+            // функция, при клике на '+' увеличивает кол-во выбранных товаров, при клике на '-', уменьшает
+            this.increment = function () {
+                console.log(this);
+                this.domRefs.quantityInput.value = +this.domRefs.quantityInput.value + 1;
+                this.toggleButtonState();
+            };
+            this.decrement = function () {
+                this.domRefs.quantityInput.value = +this.domRefs.quantityInput.value - 1;
+                this.toggleButtonState();
+            };
+            
+    
+     
+    console.log(this);
+            this.domRefs.incrementBtn.addEventListener("click", this.increment.bind(this));
+            this.domRefs.decrementBtn.addEventListener("click", this.decrement.bind(this));
+        }}
+
+    
+   
+const counters = [];
+quantityInputs.forEach ((item, i) =>{
+    counters[i] = new Counter(incrementBtns[i], decrementBtns[i], item);
+});
+
+console.log(quantityInputs);
